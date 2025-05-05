@@ -1,0 +1,1048 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+.show {
+  display: block;
+}
+.hide {
+  display: none;
+}
+body {
+  background-color: #000;
+  overflow: hidden;
+  cursor: url(./Pictures/cursor.png), auto;
+}
+.parent {
+  width: 900px;
+  height: 550px;
+  margin: 50px auto;
+  position: relative;
+  box-shadow: 0px 0px 10px #555;
+}
+.parent > #setting {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(./Pictures/setting2.png);
+  background-size: 100% 100%;
+}
+.parent > #setting > #cancel,
+.parent > #setting > #optionOk {
+  position: absolute;
+  bottom: 21.9%;
+  left: 30.7%;
+  width: 175px;
+  height: 33px;
+  cursor: pointer;
+}
+.parent > #setting > #optionOk {
+  width: 155px;
+  height: 22px;
+  bottom: 23%;
+  left: 50.2%;
+}
+.parent > #setting > #resetSave {
+  position: absolute;
+  width: 330px;
+  height: 37px;
+  top: 66%;
+  left: 32%;
+  cursor: pointer;
+}
+.parent > #setting > #cancel:hover,
+.parent > #setting > #optionOk:hover,
+.parent > #setting > #resetSave:hover {
+  filter: brightness(120%);
+}
+.parent > #setting > #sound,
+.parent > #setting > #brightness {
+  width: 300px;
+  height: 50px;
+  position: absolute;
+  top: 44%;
+  left: 33%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #13cd18;
+  font-family: cursive;
+  font-weight: 600;
+}
+.parent > #setting > #brightness {
+  top: 55%;
+}
+.parent > #setting > #sound > input,
+.parent > #setting > #brightness > input {
+  height: 9px;
+  appearance: none;
+  border-radius: 8px;
+  background-color: #272727;
+  border: 1px solid #13cd18;
+}
+.parent > #setting > #sound > input::-moz-range-thumb,
+.parent > #setting > #brightness > input::-moz-range-thumb {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  width: 20px;
+  height: 20px;
+  background-image: url(./Pictures/thumb.png);
+  background-size: cover;
+  cursor: pointer;
+}
+.parent > #setting > #sound > input::-moz-range-progress,
+.parent > #setting > #brightness > input::-moz-range-progress {
+  background-color: #13cd18;
+  height: 100%;
+  border-radius: 8px;
+}
+.parent > .background {
+  width: 100%;
+  height: 100%;
+  background: url(./Pictures/game-bg.png) no-repeat;
+  background-size: 100% 100%;
+}
+.parent > #pages {
+  width: 100%;
+  height: 100%;
+}
+.parent > #pages > img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.parent > #startgame {
+  width: 100%;
+  height: 100%;
+}
+.parent > #startgame > img:not(#exitModal) {
+  width: 100%;
+  height: 100%;
+}
+.parent > #exitModal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left:0;
+  top: 0;
+  z-index: 101;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin-left: 21px;
+}
+.parent > #exitModal > img:first-child {
+  width: 438px;
+  height: 196px;
+}
+.parent > #exitModal > img:nth-child(2):hover , .parent > #exitModal > img:nth-child(3):hover {filter: brightness(150%);}
+.parent > #exitModal > img:nth-child(2) , .parent > #exitModal > img:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  bottom: 34%;
+  cursor: pointer;
+  transform: scale(110%);
+}
+.parent > #exitModal > img:nth-child(2) {
+  left: 27%;
+}
+.parent > #exitModal > img:nth-child(3) {
+  right: 27%;
+}
+.parent > #startbtn {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 47%;
+  right: 19%;
+}
+
+.parent > #step {
+  width: 100%;
+  height: 100%;
+}
+.parent > #step > img {
+  width: 100%;
+  height: 100%;
+}
+.parent > #step > img:nth-child(2):hover,
+.parent > #step > img:last-child:hover {
+  filter: brightness(120%);
+}
+.parent > #step > img:nth-child(2),
+.parent > #step > img:last-child {
+  width: 7.6%;
+  height: 9.7%;
+  position: absolute;
+  right: 2.9%;
+  bottom: 2.6%;
+  cursor: pointer;
+}
+.parent > #step > img:last-child {
+  transform: scale(110%);
+  left: 2.9%;
+}
+.parent > #game {
+  width: 100%;
+  height: 70%;
+  background: url(./Pictures/game-bg.png) no-repeat;
+  background-size: 100% 108%;
+  position: relative;
+}
+.parent > #game > img {
+  width: 100%;
+  height: 100%;
+}
+.parent > #game > #player,
+.parent > #game2 > #player3,
+.parent > #game2 > #player6 {
+  background-image: url(./Pictures/char-left.png);
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 70px;
+  height: 105px;
+  position: absolute;
+  bottom: 4%;
+  left: 680px;
+  transition: left 0.9s linear;
+  z-index: 101;
+}
+.parent > #game2 > #player6 {
+  left: 100px;
+}
+.parent > #game2 > #items {
+  width: 49%;
+  height: 60px;
+  position: absolute;
+  left: 20%;
+  bottom: -160px;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+}
+.parent > #game2 > #items > img {
+  margin: 0 15px;
+  cursor: pointer;
+}
+.parent > #game2 > #items > img:hover {
+  filter: drop-shadow(1px 1px 7px #fff);
+}
+.parent > #game2 > #items > img.markeractive:hover {
+  filter: drop-shadow(1px 1px 7px #c6ff28);
+}
+.parent > #game2 > #yakhchal {
+  position: absolute;
+  top: 18.8%;
+  right: 7.6%;
+  width: 54px;
+  height: 78px;
+  cursor: url(./Pictures/handCursor.png), auto;
+}
+.parent > #game2 > #kesho2 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: 29%;
+  bottom: 10.8%;
+  filter: brightness(80%);
+  cursor: url(./Pictures/handCursor.png), auto;
+}
+.parent > #loadBar,
+.parent > #game2 > .loadBar,
+.parent > #game2 > #loadBar3 {
+  overflow: hidden;
+  width: 88px;
+  height: 22px;
+  border: 3px solid #333131;
+  border-radius: 25px;
+  position: absolute;
+  left: 38%;
+  top: 9%;
+  z-index: 100;
+}
+.parent > #game2 > .loadBar {
+  left: 60%;
+  top: 15%;
+}
+.parent > #game2 > #loadBar3 {
+  left: 84%;
+  top: 17%;
+}
+.parent > #game2 > #sleepingDog {
+    width: 84px;
+    height: 29px;
+    background: url(./Pictures/sleeping-dog.png);
+    background-size: 100% 100%;
+    position: absolute;
+    left: 9%;
+    bottom: 1%;
+    cursor: pointer;
+    transition: .5s;
+}
+.parent > #game2 > #wakeupDog {
+    width: 63px;
+    height: 62px;
+    background: url(./Pictures/wakeup-dog.png);
+    background-size: 100% 100%;
+    position: absolute;
+    left: 9%;
+    bottom: 1%;
+    cursor: pointer;
+    transition: .5s;
+}
+.parent > #game2 > #stopBtn2:hover , .parent > #game > #stopBtn1:hover  {
+    filter: brightness(130%) drop-shadow(0 0 4px #f5f5f5f5);
+
+}
+@keyframes load {
+  0%  {width: 0%;}
+  10% { width: 10%;}
+  20% { width: 20%;}
+  30% { width: 30%;}
+  40% { width: 40%;}
+  50% { width: 50%;}
+  60% { width: 60%;}
+  70% { width: 70%;}
+  80% { width: 80%;}
+  90% { width: 90%;}
+  100% {width: 100%;}
+}
+.parent > #loadBar > .load,
+.parent > #game2 > .loadBar > .load,
+.parent > #game2 > #loadBar3 > #load3 {
+  display: block;
+  background: rgb(204, 39, 50);
+  background: linear-gradient(
+    90deg,
+    rgb(187, 56, 65) 5%,
+    rgb(187, 59, 68) 23%,
+    rgb(163, 118, 54) 38%,
+    rgb(163, 161, 57) 53%,
+    rgb(151, 172, 62) 68%,
+    rgb(122, 167, 63) 82%,
+    rgb(118, 161, 61) 96%
+  );
+  width: 0;
+  height: 100%;
+  animation: load 1s forwards linear;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: cursive;
+  text-shadow: 1px 1px #000;
+}
+.parent > #game2 > #player3,
+.parent > #game2 > #player6 {
+  height: 100px;
+  bottom: 2%;
+}
+.parent > #game2 {
+  width: 100%;
+  height: 70%;
+  background: url(./Pictures/background-2.png) no-repeat;
+  background-size: 100% 108%;
+  position: relative;
+}
+.parent > #game2 > #sitEnemy {
+  width: 85px;
+  height: 95px;
+  position: absolute;
+  left: 19.7%;
+  top: 21.3%;
+  z-index: 101;
+}
+.parent > #game2 > #medkit {
+  width: 30px;
+  height: 35px;
+  position: absolute;
+  left: 2%;
+  bottom: 21%;
+  cursor: url(./Pictures/handCursor.png), auto;
+}
+@keyframes left {
+  0% {background-image: url(./Pictures/char-left.png);}
+  10% {background-image: url(./Pictures/left/1.png);}
+  20% {background-image: url(./Pictures/left/2.png);}
+  30% {background-image: url(./Pictures/left/3.png);}
+  40% {background-image: url(./Pictures/left/4.png);}
+  50% {background-image: url(./Pictures/left/5.png);}
+  60% {background-image: url(./Pictures/left/6.png);}
+  70% {background-image: url(./Pictures/left/7.png);}
+  80% {background-image: url(./Pictures/left/8.png);}
+  100% {background-image: url(./Pictures/char-left.png);}
+}
+@keyframes right {
+  0% {background-image: url(./Pictures/char-right.png);}
+  10% {background-image: url(./Pictures/right/1.png);}
+  20% {background-image: url(./Pictures/right/2.png);}
+  30% {background-image: url(./Pictures/right/3.png);}
+  40% {background-image: url(./Pictures/right/4.png);}
+  50% {background-image: url(./Pictures/right/5.png);}
+  60% {background-image: url(./Pictures/right/6.png);}
+  70% {background-image: url(./Pictures/right/7.png);}
+  80% {background-image: url(./Pictures/right/8.png);}
+  100% {background-image: url(./Pictures/char-right.png);}
+}
+.walkLeft {
+  animation: left 1s forwards;
+}
+.walkRight {
+  animation: right 1s forwards;
+}
+.parent > #game > #player2,
+.parent > #game2 > #player4,
+.parent > #game2 > #player5 {
+  background-image: url(./Pictures/char-left.png);
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  width: 70px;
+  height: 105px;
+  position: absolute;
+  top: 23%;
+  left: 300px;
+  transition: 0.9s linear;
+  z-index: 102;
+}
+.parent > #game2 > #player4 {
+  height: 100px;
+  left: 250px;
+}
+.parent > #game2 > #player5 {
+  height: 95px;
+  left: 75%;
+}
+.parent > #game2 > #doorbin,
+.parent > #game2 > #doorbinChasb {
+  position: absolute;
+  right: 5%;
+  top: 32%;
+  transform: scale(80%);
+  cursor: url(./Pictures/eyeCursor.png), auto;
+}
+.parent > #game2 > #tv {
+  height: 30px;
+  position: absolute;
+  left: 10.2%;
+  top: 31%;
+}
+#inat {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 20px;
+  color: #fff;
+}
+.parent > #kesho:hover {
+  cursor: url(./Pictures/handCursor.png), auto;
+}
+.parent > #kesho {
+  position: absolute;
+  right: 28.1%;
+  bottom: 38%;
+  cursor: pointer;
+  z-index: 100;
+}
+.parent > #footer {
+  width: 100%;
+  height: 30%;
+  background: url(./Pictures/footer.png) no-repeat;
+  background-size: 100% 100%;
+  position: relative;
+}
+.parent > #footer.rageFooter {
+  background: url(./Pictures/rage2.png) no-repeat;
+  background-size: 100% 100%;
+}
+.parent > #footer > #timer {
+  position: absolute;
+  width: 100px;
+  height: 25px;
+  right: 8%;
+  bottom: 51.5%;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: cursive;
+  text-shadow: 1px 1px #000;
+}
+.parent > #marker {
+  position: absolute;
+  left: 22%;
+  bottom: 1.5%;
+  cursor: pointer;
+}
+.parent > #door2,
+.parent > #door4,
+.parent > #door6 {
+  position: absolute;
+  top: 10.5%;
+  left: 31%;
+}
+.parent > #door6 {
+  top: 8.5%;
+  left: 72.8%;
+}
+.parent > #opendoor6 {
+  position: absolute;
+  top: 8.5%;
+  left: 72.8%;
+}
+.parent > #door4 {
+  top: 8.5%;
+  left: 28%;
+  cursor: url(./Pictures/downDoorCursor.png), auto;
+}
+.parent > #opendoor2,
+.parent > #opendoor4 {
+  position: absolute;
+  top: 10%;
+  left: 31%;
+}
+.parent > #opendoor4 {
+  top: 8.5%;
+  left: 28%;
+}
+.parent > #door,
+.parent > #door3,
+.parent > #door5 {
+  position: absolute;
+  top: 43%;
+  left: 32%;
+  cursor: url(./Pictures/upDoorCursor.png), auto;
+}
+.parent > #door3 {
+  top: 45%;
+  left: 28.5%;
+}
+.parent > #door5 {
+  top: 43.8%;
+  left: 73.8%;
+}
+.parent > #opendoor5 {
+  position: absolute;
+  top: 43.8%;
+  left: 73.8%;
+}
+.parent > #opendoor,
+.parent > #opendoor3 {
+  position: absolute;
+  top: 43%;
+  left: 32%;
+}
+.parent > #opendoor3 {
+  top: 45%;
+  left: 28.5%;
+}
+.parent > #grandmother {
+  position: absolute;
+  left: 40%;
+  top: 10%;
+  z-index: 50;
+  cursor: pointer;
+}
+.parent > #grandmother > img {
+  width: 70%;
+  height: 70%;
+}
+.parent > #enemy {
+  background-image: url(./Pictures/sleep-neighbour.png);
+  background-size: 90% 90%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: absolute;
+  top: 15%;
+  right: 20%;
+  z-index: 100;
+  width: 70px;
+  height: 100px;
+  transition: 1s;
+  cursor: pointer;
+}
+.parent > #enemyleft2 {
+  background-image: url(./Pictures/neighbor-char-left.png);
+  background-size: 90% 90%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: absolute;
+  top: 15%;
+  right: 43%;
+  z-index: 100;
+  width: 70px;
+  height: 100px;
+  display: none;
+}
+.parent > #enemytajub {
+  position: absolute;
+  top: 15%;
+  right: 54%;
+  z-index: 100;
+  width: 60px;
+  height: 95px;
+  transition: 1s;
+}
+.parent > #enemyback {
+  position: absolute;
+  top: 15%;
+  right: 52.5%;
+  z-index: 100;
+  width: 80px;
+  height: 108px;
+  transition: 1s;
+}
+.movee1 {
+  animation: movee 3s forwards linear;
+}
+.movee2 {
+  animation: movee2 3s forwards linear;
+}
+.rotate {
+  animation: rotate 0.5s linear 3 alternate;
+}
+.shoot {
+  animation: shoot 0.2s linear alternate;
+}
+.partab {
+  animation: partab 1s forwards;
+}
+@keyframes movee {
+  0% {
+    right: 20%;
+  }
+  100% {
+    right: 30%;
+  }
+}
+@keyframes movee2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-70px);
+  }
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+@keyframes shoot {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}
+@keyframes partab {
+  0% {
+    transform: translate(0deg, 0deg) rotate(0deg);
+  }
+  100% {
+    transform: translate(-240px, 20px) rotate(270deg);
+  }
+}
+.parent > #doorenemy1 {
+  position: absolute;
+  right: 40%;
+  top: 7%;
+  transform: scale(70%);
+  transition: 1s;
+}
+.parent > #doorenemy2 {
+  position: absolute;
+  right: 34%;
+  top: 7%;
+  transform: scale(65%);
+}
+.parent > #start:hover,
+.parent > #edit:hover,
+.parent > #option:hover,
+.parent > #exit:hover {
+  filter: brightness(130%);
+}
+.parent > #start,
+.parent > #edit,
+.parent > #option,
+.parent > #exit {
+  position: absolute;
+  top: 47%;
+  right: 27%;
+  width: 42%;
+  height: 9%;
+  cursor: pointer;
+}
+.parent > #edit {
+  top: 56.5%;
+}
+.parent > #option {
+  top: 66%;
+}
+.parent > #exit {
+  top: 75.5%;
+}
+.markeractive {
+  filter: drop-shadow(1px 1px 7px #c6ff28);
+}
+.markeractiv {
+  filter: drop-shadow(1px 1px 7px #fff);
+}
+.markeractivno {
+  filter: drop-shadow(1px 1px 7px transparent);
+}
+.parent > #winer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.parent > #winer > .win {
+  position: absolute;
+  right: 21%;
+  top: 10%;
+  z-index: 1000;
+}
+.parent > #winer > #ok:hover,
+.parent > #winer > #restart:hover {filter: brightness(150%);}
+.parent > #winer > #ok,
+.parent > #winer > #restart {
+  position: absolute;
+  bottom: 30%;
+  z-index: 1000;
+  cursor: pointer;
+}
+.parent > #winer > #ok {right: 29.5%;}
+.parent > #winer > #restart {right: 46.4%;}
+.width {width: 110px;}
+@keyframes enemyWalkLeft {
+  0% {
+    background-image: url(./Pictures/1left.png);
+    transform: translateX(0px);
+  }
+  20% {
+    background-image: url(./Pictures/2left.png);
+    transform: translateX(-20px);
+  }
+  40% {
+    background-image: url(./Pictures/3left.png);
+    transform: translateX(-40px);
+  }
+  60% {
+    background-image: url(./Pictures/1left.png);
+    transform: translateX(-60px);
+  }
+  80% {
+    background-image: url(./Pictures/2left.png);
+    transform: translateX(-80px);
+  }
+  100% {
+    background-image: url(./Pictures/3left.png);
+    transform: translateX(-100px);
+  }
+}
+@keyframes enemyWalkLeft2 {
+  0% {
+    background-image: url(./Pictures/1left.png);
+    transform: translateX(0px);
+  }
+  20% {
+    background-image: url(./Pictures/2left.png);
+    transform: translateX(-20px);
+  }
+  40% {
+    background-image: url(./Pictures/3left.png);
+    transform: translateX(-40px);
+  }
+  60% {
+    background-image: url(./Pictures/1left.png);
+    transform: translateX(-60px);
+  }
+  80% {
+    background-image: url(./Pictures/2left.png);
+    transform: translateX(-80px);
+  }
+  100% {
+    background-image: url(./Pictures/3left.png);
+  }
+}
+@keyframes enemyWalkRight {
+  0% {background-image: url(./Pictures/enemy2right.png); transform: translateX(15px) ;}
+  5% {background-image: url(./Pictures/enemy1right.png); transform: translateX(30px) ;}
+  10% {background-image: url(./Pictures/enemy2right.png); transform: translateX(45px) ;}
+  15% {background-image: url(./Pictures/enemy1right.png); transform: translateX(60px) ;}
+  20% {background-image: url(./Pictures/enemy2right.png); transform: translateX(75px) ;}
+  25% {background-image: url(./Pictures/enemy1right.png); transform: translateX(90px) ;}
+  30% {background-image: url(./Pictures/enemy2right.png);transform: translateX(105px) ;}
+  35% {background-image: url(./Pictures/enemy1right.png);transform: translateX(120px) ;}
+  40% {background-image: url(./Pictures/enemy2right.png);transform: translateX(135px) ;}
+  45% {background-image: url(./Pictures/enemy1right.png);transform: translateX(150px) ;}
+  50% {background-image: url(./Pictures/enemy2right.png);transform: translateX(165px) ;}
+  55% {background-image: url(./Pictures/enemy1right.png);transform: translateX(180px) ;}
+  60% {background-image: url(./Pictures/enemy2right.png);transform: translateX(195px) ;}
+  65% {background-image: url(./Pictures/enemy1right.png);transform: translateX(210px) ;}
+  70% {background-image: url(./Pictures/enemy2right.png);transform: translateX(225px) ;}
+  75% {background-image: url(./Pictures/enemy1right.png);transform: translateX(240px) ;}
+  80% {background-image: url(./Pictures/enemy2right.png);transform: translateX(255px) ;}
+  85% {background-image: url(./Pictures/enemy1right.png);transform: translateX(270px) ;}
+  90% {background-image: url(./Pictures/enemy2right.png);transform: translateX(285px) ;}
+  95% {background-image: url(./Pictures/enemy1right.png);transform: translateX(300px) ;}
+  100% {background-image: url(./Pictures/enemy2right.png);transform: translateX(300px) ;}
+}
+
+.enemyWalkLeft {  animation: enemyWalkLeft 1.7s forwards !important;}
+.enemyWalkLeft2 {  animation: enemyWalkLeft2 1.7s forwards !important;}
+.enemyWalkRight {  animation: enemyWalkRight 7s forwards !important;}
+.find {  background-image: url(./Pictures/find.png) !important;}
+#cursor,
+#cursorTop,
+#game2 > #cursor2,
+#game2 > #cursorTop2 {
+  cursor: url("./Pictures/cursorDefault.png"), auto;
+  width: 57%;
+  height: 50px;
+  position: absolute;
+  bottom: 10px;
+  left: 27%;
+}
+#game2 > #enemyStepTwostanding {
+  background: url(./Pictures/sleep-neighbour.png)no-repeat;
+  background-size: 90% 90%;
+  background-position: 50%;
+  width: 65px;
+  height: 115px;
+  position: absolute;
+  left: 16%;
+  top: 20.7%;
+  z-index: 101;
+}
+#game2 > #cursorTop3 {
+  position: absolute;
+  cursor: url("./Pictures/cursorDefault.png"), auto;
+  height: 50px;
+  width: 35%;
+  top: 38%;
+  left: 58%;
+}
+#game2 > #video {
+  background-size: 120%;
+  background-position: 70% 23%;
+  overflow: hidden;
+  position: absolute;
+  cursor: url("./Pictures/cursorDefault.png"), auto;
+  height: 47%;
+  width: 52%;
+  top: 4.5%;
+  left: 4.7%;
+  z-index: 1000;
+}
+#cursorTop,
+#game2 > #cursorTop2 {
+  width: 48.5%;
+  top: 38%;
+  left: 8.5%;
+}
+#game2 > #cursor2 {
+  width: 59%;
+  bottom: 1px;
+  left: 25%;
+}
+#game2 > #cursorTop2 {
+  left: 7.5%;
+}
+#game2 > #doorTopLeft ,  #game2 > #doorTopRight{
+  position: absolute;
+  top: 8%;
+  left: 50.9%;
+  transform: scale(72%);
+  z-index: 1001;
+}
+#game2 > #doorTopRight {left: 56%;}
+#game2 > #cocGif {
+  overflow: hidden;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 355px;
+  height: 185px;
+  position: absolute;
+  top: 3.5%;
+  right: 4%;
+}
+@keyframes paint {
+  0% {
+    background-image: url(./Pictures/painting.png);
+    transform: translateX(-5px);
+  }
+  50% {
+    background-image: url(./Pictures/painting.png);
+    transform: translateX(5px);
+  }
+  100% {
+    background-image: url(./Pictures/char-left.png);
+    transform: translateX(0px);
+  }
+}
+.painting {animation: paint 2s forwards;}
+.footerStepTwo {
+  background-image: url(./Pictures/footer3.png) !important;
+  background-size: 100% 15px;
+}
+.charRight {background-image: url(./Pictures/char-right.png) !important;}
+#game2 > #microwave {
+  position: absolute;
+  top: 23.5%;
+  right: 35%;
+  width: 35px;
+  height: 25px;
+  cursor: url(./Pictures/eyeCursor.png), auto;
+}
+#game2 > #downDoor,
+#game2 > #goToDownDoor,
+#game2 > #downDoorDastshooee,
+#game2 > #goToDownDastshooee {
+  position: absolute;
+  height: 150px;
+  bottom: -4.7%;
+  left: 21.7%;
+  cursor: url(./Pictures/cursorLeft.png), auto;
+  filter: brightness(120%);
+}
+#game2 > #downDoorDastshooee {left: 16.2%;}
+#game2 > #goToDownDastshooee {left: 16.2%;}
+#game2 > #idea {
+  position: absolute;
+  left: 0.5%;
+  bottom: -24%;
+  width: 65px;
+  height: 50px;
+  z-index: 102;
+}
+#game2 > #timerStepTwo {
+  position: absolute;
+  right: 8%;
+  bottom: -22%;
+  width: 100px;
+  height: 30px;
+  z-index: 102;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: cursive;
+  text-shadow: 1px 1px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.parent > #credit {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./Pictures/credit.png) no-repeat;
+  background-size: 100% 100%;
+}
+.parent > #credit > img:hover {filter: brightness(120%);}
+.parent > #credit > .container {
+    position: absolute;
+    top: 12.5%;
+    left: 14%;
+    width: 650px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.parent > #credit > .container > #closeCredit {
+  position: absolute;
+  left: 2.9%;
+  top: 1.5%;
+  cursor: pointer;
+  transform: scale(65%);
+}
+.parent > #credit > .container > span {
+    font-size: 18px;
+    font-family: cursive;
+    position: absolute;
+}
+.parent > #credit > .container > #span1 {
+    font-size: 30px;
+    right: 37%;
+    top: 5%;
+}
+.parent > #credit > .container > #span2 {
+    right: 10%;
+    bottom: 25%;
+}
+.parent > #credit > .container > #span3 {
+    right: 12%;
+    bottom: 40%;
+}
+.parent > #credit > .container > #neighboursPic {
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+}
+.parent > #stopMenu {
+    width: 100%;
+    height: 100%;
+    background: url(./Pictures/stop-menu.png) no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+    background-size: 100% 100%;
+    z-index: 10001;
+}
+.parent > #stopMenu > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 400px;
+  height: 450px;
+  left: 3%;
+  top: 10%;
+}
+.parent > #stopMenu > .container > img:hover {filter: brightness(126%);}
+.parent > #stopMenu > .container > img {
+  cursor: pointer;
+  width: 93%;
+  height: 45px;
+  margin: 3px 0;
+}
+#fps {
+  color: #fff;
+  font-size: 20px;
+  position: absolute;
+  left: 6%;
+  top: -5.7%;
+  font-family: cursive;
+}
+.parent > #stopMenu > #btnContinue:hover {filter: brightness(130%);}
+.parent > #stopMenu > #btnContinue {
+  position: absolute;
+  right: 3.4%;
+  bottom: 2.8%;
+  cursor: pointer;
+  transform: scaleX(115%);
+}

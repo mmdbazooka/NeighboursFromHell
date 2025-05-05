@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>|~ Hamid && Mamad ~|</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="audio1" src="./audio/angry-neighbour-tablo.mp3"></audio>
+    <audio id="audio2" src="./audio/door.mp3"></audio>
+    <audio id="audio3" src="./audio/game-bg.mp3"></audio>
+    <audio id="audio4" src="./audio/gereftan.mp3"></audio>
+    <audio id="audio5" src="./audio/painting-with-marker.mp3"></audio>
+    <audio id="audio6" src="./audio/start-menu.mp3"></audio>
+    <audio id="audio7" src="./audio/start-the-game.mp3"></audio>
+    <audio id="audio8" src="./audio/tagh.mp3"></audio>
+    <audio id="audio9" src="./audio/walk.mp3"></audio>
+    <audio id="audio10" src="./audio/delbary.mp3"></audio>
+    <audio id="audio12" src="./audio/pink-panter-mobile.mp3"></audio>
+    <audio id="audio13" src="./audio/audioLose.mp3"></audio>
+    <audio id="soundDog" src="./audio/soundDog.mp3"></audio>
+    <audio id="lastAudio" src="./audio/last.mp3"></audio>
+    <div id="fps">FPS:198</div>
+    <div class="parent">
+        <div id="credit" class="hide">
+            <div class="container">
+                <img src="./Pictures/neighbours-from-hell.png" alt="" id="neighboursPic">
+                <img src="./Pictures/exit.png" alt="" id="closeCredit" onmouseover="tagh()">
+                <span id="span1">Created by</span>
+                <span id="span2">Mamad-Bazooka</span>
+                <span id="span3">Hamid-Stormy</span>
+            </div>
+        </div>
+        <div id="setting" class="hide">
+            <img src="./Pictures/cancel.png" alt="" id="cancel" onclick="exitBack()" onmouseover="tagh()">
+            <img src="./Pictures/ok.png" alt="" id="optionOk" onclick="exitBack()" onmouseover="tagh()">
+            <img src="./Pictures/resetSave.png" alt="" id="resetSave" onmouseover="tagh()">
+            <div id="sound">
+                <input type="range" min="0" max="1" step="0.1" id="volume" value="1">
+                <span>Volume</span>
+            </div>
+            <div id="brightness">
+                <input type="range" min="40" max="160" step="5" id="bright" value="100" autocomplete="off">
+                <span>Brightness</span>
+            </div>
+        </div>
+        <div id="loadBar" class="hide"><span id="load"></span></div>
+        <div id="pages">
+            <img src="./Pictures/starting-game-3.png" alt="" id="img1">
+            <img src="./Pictures/starting-game-2.png" alt="" id="img2">
+            <img src="./Pictures/starting-game-1.png" alt="" id="img3">
+        </div>
+        <div id="startgame" class="hide">
+            <img src="./Pictures/first-menu.png" alt="">
+        </div>
+        <div id="exitModal">
+            <img src="./Pictures/quit-game-modal.png" alt="">
+            <img src="./Pictures/tik.png" alt="" id="tik" onmouseover="tagh()">
+            <img src="./Pictures/exit.png" alt="" id="closeTheGame" onmouseover="tagh()">
+        </div>
+
+        <div id="step" class="hide">
+            <img src="./Pictures/start-menu.png" alt="">
+            <img src="./Pictures/start-btn.png" alt="" onmouseover="tagh()">
+            <img src="./Pictures/backTo - start-menu.png" alt="" id="backToMenu" onmouseover="tagh()">
+        </div>
+        <div id="game2" class="hide">
+            <div id="cocGif"></div>
+            <img src="./Pictures/0080.png" alt="" id="doorTopRight" class="hide">
+            <img src="./Pictures/0081.png" alt="" id="doorTopLeft" class="hide">
+            <div id="sleepingDog"></div>
+            <div id="wakeupDog" class="hide"></div>
+            <div id="loadBar3" class="hide"><span id="load3"></span></div>
+            <img src="./gif/tv.gif" alt="" id="tv">
+            <div id="timerStepTwo">2:59</div>
+            <img src="./Pictures/mobl-sculpture.png" alt="" id="idea">
+            <div class="loadBar hide"><span class="load"></span></div>
+            <img src="./Pictures/microwave.png" alt="" id="microwave">
+            <div id="items"></div>
+            <img src="./Pictures/yakhchal.png" alt="" id="yakhchal">
+            <img src="./Pictures/keshoo.png" alt="" id="kesho2">
+            <div id="player3" data-direction="left" class="show"></div>
+            <div id="player4" class="hide" data-direction="left"></div>
+            <div id="player5" class="hide" data-direction="left"></div>
+            <img src="./Pictures/neshaste.png" alt="" id="sitEnemy" class="show">
+            <div id="cursor2"></div>
+            <div id="cursorTop2" class="hide"></div>
+            <div id="cursorTop3" class="hide"></div>
+            <div id="enemyStepTwostanding" class="hide"></div>
+            <div id="video" class="hide"></div>
+            <img src="./Pictures/doorbin.png" alt="" id="doorbin" class="show">
+            <img src="./Pictures/doorbin-chasbide.png" alt="" id="doorbinChasb" class="hide">
+        </div>
+        <div id="game" class="hide">
+            <div id="player" data-direction="left"></div>
+            <div id="player2" class="hide" data-direction="right" style="left: 290px;"></div>
+            <img src="./Pictures/char-right.png" alt="" id="player2" class="hide" data-direction="right">
+            <div id="cursor"></div>
+            <div id="cursorTop"></div>
+        </div>
+        <div id="footer" class="hide">
+            <div id="timer"><span id="time"></span></div>
+        </div>
+        <div id="kesho" class="hide"><img src="./Pictures/keshoo.png" alt=""></div>
+        <div id="marker" class="hide">
+            <img src="./Pictures/marker.png" alt="" width="55px" id="mark">
+        </div>
+        <div id="door" class="hide"><img src="./Pictures/door.png" alt="" width="60px"></div>
+        <div id="opendoor" class="hide"><img src="./Pictures/open-door.png" alt="" width="60px"></div>
+
+        <div id="door2" class="hide"><img src="./Pictures/door.png" alt="" width="60px"></div>
+        <div id="opendoor2" class="hide"><img src="./Pictures/open-door.png" alt="" width="60px"></div>
+
+        <div id="door3" class="hide"><img src="./Pictures/door.png" alt="" width="60px"></div>
+        <div id="opendoor3" class="hide"><img src="./Pictures/open-door.png" alt="" width="60px"></div>
+
+        <div id="door4" class="hide"><img src="./Pictures/door.png" alt="" width="60px" height="95px"></div>
+        <div id="opendoor4" class="hide"><img src="./Pictures/open-door.png" alt="" width="60px" height="95px"></div>
+
+        <div id="door5" class="hide"><img src="./Pictures/door.png" alt="" width="60px" height="95px"></div>
+        <div id="opendoor5" class="hide"><img src="./Pictures/open-door.png" alt="" width="60px" height="95px"></div>
+
+        <div id="door6" class="hide"><img src="./Pictures/door.png" alt="" width="60px" height="95px"></div>
+        <div id="opendoor6" class="hide"><img src="./Pictures/open-door.png" alt="" width="60px" height="95px"></div>
+
+        <div id="grandmother"><img src="./Pictures/grandma-tablo.png" alt="" id="mother" class="hide"></div>
+        <div id="enemy" class="hide"></div>
+        <div id="enemyleft2"></div>
+        <img src="./Pictures/angry-tablo1.png" id="enemytajub" class="hide"></img>
+        <img src="./Pictures/angry-tablo2.png" id="enemyback" class="hide"></img>
+        <img src="./Pictures/01.png" id="doorenemy1" class="hide"></img>
+        <img src="./Pictures/02.png" id="doorenemy2" class="hide"></img>
+        <img src="./Pictures/start-game.png" alt="" id="start" class="hide" onmouseover="tagh()">
+        <img src="./Pictures/credits.png" alt="" id="edit" class="hide" onmouseover="tagh()">
+        <img src="./Pictures/options.png" alt="" id="option" class="hide" onmouseover="tagh()">
+        <img src="./Pictures/quit-game.png" alt="" id="exit" class="hide" onmouseover="tagh()">
+        <div id="winer" class="hide">
+            <img src="./Pictures/win.png" alt="" class="win">
+            <img src="./Pictures/ok.png" alt="" id="ok">
+            <img src="./Pictures/restart.png" alt="" id="restart">
+        </div>
+        <div id="information"></div>
+    </div>
+    <div id="inat"></div>    
+<script src="./script.js"></script>
+</body>
+</html>
